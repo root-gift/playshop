@@ -44,5 +44,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/supprimerproduit/{id}', [ProduitController::class, 'supprimerproduit']);
     Route::get('activer_produit/{id}', [ProduitController::class, 'activer_produit']);
     Route::get('desactiver_produit/{id}', [ProduitController::class, 'desactiver_produit']);
+
+    Route::get('/profil/{id}', [AdminController::class, 'profile']);
 });
 
