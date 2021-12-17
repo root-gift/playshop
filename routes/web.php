@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[ClientController::class,'index']);
+Route::get('/catalogue', [ClientController::class, 'catalogue']);
+Route::get('/about', [ClientController::class, 'about']);
+Route::get('/popup', [ClientController::class, 'popup']);
