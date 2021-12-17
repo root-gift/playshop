@@ -170,17 +170,17 @@
                               <div class="detail-box">
                                  <h1>
                                     <span>
-                                    Sale 20% Off
+                                    Reduction de20%
                                     </span>
                                     <br>
-                                    On Everything
+                                    Sur Tout!
                                  </h1>
                                  <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                   Playshop on s'amuse à l'achat!
                                  </p>
                                  <div class="btn-box">
                                     <a href="" class="btn1">
-                                    Shop Now
+                                     Achetez
                                     </a>
                                  </div>
                               </div>
@@ -195,17 +195,17 @@
                               <div class="detail-box">
                                  <h1>
                                     <span>
-                                    Sale 20% Off
+                                    Reduction de20%
                                     </span>
                                     <br>
-                                    On Everything
+                                    Sur Tout!
                                  </h1>
                                  <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                   Playshop on s'amuse à l'achat!
                                  </p>
                                  <div class="btn-box">
                                     <a href="" class="btn1">
-                                    Shop Now
+                                     Achetez
                                     </a>
                                  </div>
                               </div>
@@ -220,17 +220,17 @@
                               <div class="detail-box">
                                  <h1>
                                     <span>
-                                    Sale 20% Off
+                                    Reduction de20%
                                     </span>
                                     <br>
-                                    On Everything
+                                    Sur Tout!
                                  </h1>
                                  <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                   Playshop on s'amuse à l'achat!
                                  </p>
                                  <div class="btn-box">
                                     <a href="" class="btn1">
-                                    Shop Now
+                                     Achetez
                                     </a>
                                  </div>
                               </div>
@@ -263,14 +263,14 @@
                   <div class="col-md-6 ml-auto">
                      <div class="heading_container remove_line_bt">
                         <h2>
-                           #NewArrivals
+                           #Nouveautés
                         </h2>
                      </div>
                      <p style="margin-top: 20px;margin-bottom: 30px;">
-                        Vitae fugiat laboriosam officia perferendis provident aliquid voluptatibus dolorem, fugit ullam sit earum id eaque nisi hic? Tenetur commodi, nisi rem vel, ea eaque ab ipsa, autem similique ex unde!
+               
                      </p>
                      <a href="">
-                     Shop Now
+                     Achetez maintenant
                      </a>
                   </div>
                </div>
@@ -284,11 +284,12 @@
          <div class="container">
             <div class="heading_container heading_center">
                <h2>
-                  Our <span>products</span>
+                  Nos <span>produits</span>
                </h2>
             </div>
             <div class="section-produit">
                <div class="row">
+                  @foreach ($product as $products)
                   <div class="col-sm-6 col-md-4 col-lg-4">
                      <div class="box">
                         <div class="option_container">
@@ -302,222 +303,22 @@
                            </div>
                         </div>
                         <div class="img-box">
-                           <img src="images/p1.png" alt="">
+                           <img src="/storage/product_images/{{ $products->product_image }}" alt="">
+                           
                         </div>
                         <div class="detail-box">
                            <h5>
-                              Men's Shirt
+                              {{ $products->product_name }}
                            </h5>
                            <h6>
-                              $75
+                              ${{ $products->product_price }}
                            </h6>
                         </div>
                      </div>
                   </div>
-                  <div class="col-sm-6 col-md-4 col-lg-4">
-                     <div class="box">
-                        <div class="option_container">
-                           <div class="options">
-                              <a href="" class="option1" data-toggle="modal" data-target="#exampleModalCenter">
-                              Description
-                              </a>
-                              <a href="" class="option2">
-                              Panier
-                              </a>
-                              <a href="" class="option3" >
-                                 Description
-                                 </a>
-                           </div>
-                        </div>
-                        <div class="img-box">
-                           <img src="images/p2.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                           <h5>
-                              Men's Shirt
-                           </h5>
-                           <h6>
-                              $80
-                           </h6>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4 col-lg-4">
-                     <div class="box">
-                        <div class="option_container">
-                           <div class="options">
-                              <a href="" class="option1" data-toggle="modal" data-target="#exampleModalCenter">
-                              Description
-                              </a>
-                              <a href="" class="option2">
-                              Panier
-                              </a>
-                           </div>
-                        </div>
-                        <div class="img-box">
-                           <img src="images/p3.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                           <h5>
-                              Women's Dress
-                           </h5>
-                           <h6>
-                              $68
-                           </h6>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4 col-lg-4">
-                     <div class="box">
-                        <div class="option_container">
-                           <div class="options">
-                              <a href="" class="option1" data-toggle="modal" data-target="#exampleModalCenter">
-                              Description
-                              </a>
-                              <a href="" class="option2">
-                              Panier
-                              </a>
-                           </div>
-                        </div>
-                        <div class="img-box">
-                           <img src="images/p4.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                           <h5>
-                              Women's Dress
-                           </h5>
-                           <h6>
-                              $70
-                           </h6>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4 col-lg-4">
-                     <div class="box">
-                        <div class="option_container">
-                           <div class="options">
-                              <a href="" class="option1" data-toggle="modal" data-target="#exampleModalCenter">
-                              Description
-                              </a>
-                              <a href="" class="option2">
-                              Panier
-                              </a>
-                           </div>
-                        </div>
-                        <div class="img-box">
-                           <img src="images/p5.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                           <h5>
-                              Women's Dress
-                           </h5>
-                           <h6>
-                              $75
-                           </h6>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4 col-lg-4">
-                     <div class="box">
-                        <div class="option_container">
-                           <div class="options">
-                              <a href="" class="option1" data-toggle="modal" data-target="#exampleModalCenter">
-                              Description
-                              </a>
-                              <a href="" class="option2">
-                              Panier
-                              </a>
-                           </div>
-                        </div>
-                        <div class="img-box">
-                           <img src="images/p6.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                           <h5>
-                              Women's Dress
-                           </h5>
-                           <h6>
-                              $58
-                           </h6>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4 col-lg-4">
-                     <div class="box">
-                        <div class="option_container">
-                           <div class="options">
-                              <a href="" class="option1" data-toggle="modal" data-target="#exampleModalCenter">
-                              Description
-                              </a>
-                              <a href="" class="option2">
-                              Panier
-                              </a>
-                           </div>
-                        </div>
-                        <div class="img-box">
-                           <img src="images/p7.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                           <h5>
-                              Women's Dress
-                           </h5>
-                           <h6>
-                              $80
-                           </h6>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4 col-lg-4">
-                     <div class="box">
-                        <div class="option_container">
-                           <div class="options">
-                              <a href="" class="option1" data-toggle="modal" data-target="#exampleModalCenter">
-                              Description
-                              </a>
-                              <a href="" class="option2">
-                              Panier
-                              </a>
-                           </div>
-                        </div>
-                        <div class="img-box">
-                           <img src="images/p8.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                           <h5>
-                              Men's Shirt
-                           </h5>
-                           <h6>
-                              $65
-                           </h6>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4 col-lg-4">
-                     <div class="box">
-                        <div class="option_container">
-                           <div class="options">
-                              <a href="" class="option1" data-toggle="modal" data-target="#exampleModalCenter">
-                              Description
-                              </a>
-                              <a href="" class="option2">
-                              Panier
-                              </a>
-                           </div>
-                        </div>
-                        <div class="img-box">
-                           <img src="images/p9.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                           <h5>
-                              Men's Shirt
-                           </h5>
-                           <h6>
-                              $65
-                           </h6>
-                        </div>
-                     </div>
-                  </div>
+                  @endforeach
 
+                  
                </div>
          </div>
             <div class="btn-box">
@@ -553,10 +354,10 @@
                         </div>
                         <div class="detail-box">
                            <h5>
-                              Anna Trevor
+                           Anna OUEDRAOGO
                            </h5>
                            <h6>
-                              Customer
+                              Client
                            </h6>
                            <p>
                               Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
@@ -575,10 +376,10 @@
                         </div>
                         <div class="detail-box">
                            <h5>
-                              Anna Trevor
+                              Anna OUEDRAOGO
                            </h5>
                            <h6>
-                              Customer
+                              Client
                            </h6>
                            <p>
                               Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
@@ -597,10 +398,10 @@
                         </div>
                         <div class="detail-box">
                            <h5>
-                              Anna Trevor
+                              Anna ZONGO
                            </h5>
                            <h6>
-                              Customer
+                              Client
                            </h6>
                            <p>
                               Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
@@ -612,11 +413,11 @@
                <div class="carousel_btn_box">
                   <a class="carousel-control-prev" href="#carouselExample3Controls" role="button" data-slide="prev">
                   <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-                  <span class="sr-only">Previous</span>
+                  <span class="sr-only">Precedent</span>
                   </a>
                   <a class="carousel-control-next" href="#carouselExample3Controls" role="button" data-slide="next">
                   <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                  <span class="sr-only">Next</span>
+                  <span class="sr-only">Suivant</span>
                   </a>
                </div>
             </div>

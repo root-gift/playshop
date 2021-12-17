@@ -20,6 +20,7 @@ Route::get('/',[ClientController::class,'index']);
 Route::get('/catalogue', [ClientController::class, 'catalogue']);
 Route::get('/about', [ClientController::class, 'about']);
 Route::get('/popup', [ClientController::class, 'popup']);
+Route::get('/select-par-cat/{id}', [ClientController::class, 'categories']);
 
 Route::get('/home', function () {
     return view('welcome');

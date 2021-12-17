@@ -115,7 +115,7 @@
                <div class="col-md-12">
                   <div class="full">
                      <h3>Catalogue</h3>
-                     <span>Ordinateurs/  Tablettes/  Telephones</span>
+                     <span>  <p>Tout/</p> <p> Ordinateurs/</p> <p>Tablettes/</p> <p>Telephones</p>     </span>
                   </div>
                </div>
                
