@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="{{(Request::is('/admin')) ? 'nav-link text-white active bg-gradient-primary':'nav-link text-white '}}" href="{{url('/admin')}}">
+          <a class="{{(request()->routeIs('/admin')) ? 'nav-link text-white ':'nav-link text-white active bg-gradient-primary'}}" href="{{url('/admin')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
@@ -77,22 +77,6 @@
           </a>
         </li>
       </form>
-  
       </ul>
     </div>
-
-    {{-- <form method="POST" action="{{ route('logout') }}">
-      @csrf
-
-      <x-dropdown-link :href="route('logout')"
-              onclick="event.preventDefault();
-                          this.closest('form').submit();">
-          {{ __('Se deconnecter') }}
-      </x-dropdown-link>
-  </form> --}}
-    {{-- <div class="sidenav-footer position-absolute w-100 bottom-0 ">
-      <div class="mx-3">
-        <a class="btn bg-gradient-primary mt-4 w-100" href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Upgrade to pro</a>
-      </div>
-    </div> --}}
   </aside>

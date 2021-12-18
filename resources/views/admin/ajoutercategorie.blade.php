@@ -29,7 +29,7 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg blur border-radius-lg top-0 z-index-3 shadow position-absolute mt-4 py-2 start-0 end-0 mx-4">
           <div class="container-fluid ps-2 pe-0">
-            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="../pages/dashboard.html">
+            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 ">
               Ajouter une categorie
             </a>
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,27 +42,15 @@
             <div class="collapse navbar-collapse" id="navigation">
               <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href='{{url('/dashboard')}}'>
+                  <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href='{{url('/admin')}}'>
                     <i class="fa fa-chart-pie opacity-6 text-dark me-1"></i>
                     Dashboard
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link me-2" href="../pages/profile.html">
+                  <a class="nav-link me-2" href="{{url('/table')}}">
                     <i class="fa fa-user opacity-6 text-dark me-1"></i>
-                    Profile
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link me-2" href="../pages/sign-up.html">
-                    <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
-                    Sign Up
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link me-2" href="../pages/sign-in.html">
-                    <i class="fas fa-key opacity-6 text-dark me-1"></i>
-                    Sign In
+                   Table
                   </a>
                 </li>
               </ul>
@@ -91,9 +79,10 @@
 
                     {!!Form::open(['action' => 'App\Http\Controllers\CategorieController@sauvercategorie', 'method' => 'POST', 'class' => ' input-group-outline', 'id' => 'commentForm'])!!}
                     {{ csrf_field() }}
-                    <div class="form-group">
-                        {!!Form::label('', 'Nom de la catégorie', ['for' =>'form-label'])!!}
-                        {!!Form::text('Category_name', '', ['id' => 'cname', 'class' => 'form-control'] ,'placeholder' ,'Entrer le nom de la catégorie')!!}
+
+                    <div class="input-group input-group-outline mb-3">
+                      {!!Form::label('', 'Nom de la catégorie', ['for' =>'cname', 'class' => 'form-label'])!!}
+                      {!!Form::text('Category_name', '', ['id' => 'cname', 'class' => 'form-control'])!!}
                     </div>
                     {!!Form::submit('Ajouter',['class' => 'btn btn-primary'])!!}
                     {!!Form::close()!!}
