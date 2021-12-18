@@ -51,7 +51,7 @@
                            <a class="nav-link" href="{{url('/about')}}">A propos de nous</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Connexion</a>
+                            <a class="nav-link" href="#">Connexion</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="#">
@@ -116,6 +116,7 @@
          </header>
          <!-- end header section -->
          {{-- popup section --}}
+         @foreach($product as $prod)
          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
@@ -126,7 +127,8 @@
                 </div>
                 <div class="row no-gutters">
                    <div class="col-md-6 d-flex">
-                      <div class="modal-body p-5 img d-flex" style="background-image: url(images/bg-1.jpg);">
+                      <img class="modal-body" src="/storage/product_images/{{ $prod->product_image }}" alt="">
+                      {{-- <div  style="background-image: url(images/bg-1.jpg);"> --}}
                       </div>
                     </div>
                     <div class="col-md-6 d-flex">
@@ -138,6 +140,11 @@
                               <span id="titre_produit">TITRE</span>
                               <br>
                               <span id="description">Description</span>
+                              @if ($prod->status==1)
+                                 <label class="badge badge-success">Disponible</label>            
+                              @else
+                                 <label class="badge badge-danger">En rupture</label>
+                              @endif
                              </div>
                              <br>
                              <div class="align-items-center">
@@ -155,6 +162,7 @@
               </div>
             </div>
           </div>
+          @endforeach
          {{-- end popup section --}}
          <!-- slider section -->
          <section class="slider_section ">
@@ -310,7 +318,7 @@
                            <h5>
                               {{ $products->product_name }}
                            </h5>
-                           <h6>
+                           <h6 style="color:red">
                               ${{ $products->product_price }}
                            </h6>
                         </div>
