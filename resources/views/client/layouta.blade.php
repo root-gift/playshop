@@ -11,15 +11,17 @@
       <meta name="description" content="" />
       <meta name="author" content="" />
       <link rel="shortcut icon" href="images/favicon.png" type="">
-      <title>Famms - Fashion HTML Template</title>
+      <title>PLAY&SHOP</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
       <!-- font awesome style -->
       <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" />
+      <link href="css/stylea.scss" rel="stylesheet" />
       <!-- Custom styles for this template -->
       <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
       <!-- responsive style -->
       <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap" rel="stylesheet">
       <style>
          ul,li{
             list-style:none;
@@ -61,9 +63,9 @@
                            <a class="nav-link" href="{{url('/about')}}">A propos de nous</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Connexion</a>
+                            <a class="nav-link" href="{{url('/admin')}}" data-toggle="modal" data-target="#exampleModalCenter">Connexion</a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                            <a class="nav-link" href="#">
                               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                                  <g>
@@ -118,7 +120,7 @@
                                  </g>
                               </svg>
                            </a>
-                        </li>
+                        </li> --}}
                      </ul>
                   </div>
                </nav>

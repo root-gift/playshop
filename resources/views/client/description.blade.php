@@ -11,7 +11,7 @@
       <meta name="description" content="" />
       <meta name="author" content="" />
       <link rel="shortcut icon" href="images/favicon.png" type="">
-      <title>PLAY&SHOP</title>
+      <title>PLAYSHOP</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
       <!-- font awesome style -->
@@ -53,7 +53,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('/admin')}}">Connexion</a>
                         </li>
-                        {{-- <li class="nav-item">
+                        <li class="nav-item">
                            <a class="nav-link" href="#">
                               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                                  <g>
@@ -108,7 +108,7 @@
                                  </g>
                               </svg>
                            </a>
-                        </li> --}}
+                        </li>
                      </ul>
                   </div>
                </nav>
@@ -240,7 +240,7 @@
       <!-- end arrival section -->
          {{-- popup section --}}
          @foreach($product as $prod)
-         <div class="modal fade" id="exampleModalCenter{{ $prod->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -264,7 +264,7 @@
                               <br>
                               <span id="description" style="color:red">${{ $prod->product_price }}</span>
                               <br>
-                              @if ($prod->status==1)
+                              @if ($prod->status==0)
                                  <label class="badge badge-success">Disponible</label>            
                               @else
                                  <label class="badge badge-danger">En rupture</label>
@@ -304,7 +304,7 @@
                      <div class="box">
                         <div class="option_container">
                            <div class="options">
-                              <a href="/produit/{{ $products->id}}" class="option1" data-toggle="modal" data-target="#exampleModalCenter{{ $products->id}}">
+                              <a href="/produit/{{ $products->id}}" class="option1" data-toggle="modal" data-target="#exampleModalCenter">
                               Description
                               </a>
                               <a href="" class="option2">
@@ -332,7 +332,7 @@
                </div>
          </div>
             <div class="btn-box">
-               <a href="{{url('/all')}}">
+               <a href="">
                View All products
                </a>
             </div>

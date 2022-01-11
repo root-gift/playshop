@@ -17,10 +17,12 @@ use App\Http\Controllers\ClientController;
 |
 */
 Route::get('/',[ClientController::class,'index']);
+Route::get('/all',[ClientController::class,'index_all']);
 Route::get('/catalogue', [ClientController::class, 'catalogue']);
 Route::get('/about', [ClientController::class, 'about']);
 Route::get('/popup', [ClientController::class, 'popup']);
-Route::get('/catalogue/{id}', [ClientController::class, 'categories']);
+Route::get('/catalogue/{name?}', [ClientController::class, 'categories']);
+Route::get('/catalogue/{name?}/{id}', [ClientController::class, 'categories_par_id']);
 Route::get('/produit/{id}', [ClientController::class, 'produit_par_id']);
 
 Route::get('/home', function () {
